@@ -1,0 +1,19 @@
+{
+  "name": "webdriverio",
+  "version": "1.0.0",
+  "description": "some webdriverIO tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandroSagrera/webdriverio.git"
+  },
+  "author": "A.S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandroSagrera/webdriverio/issues"
+  },
+  "homepage": "https://github.com/alejandroSagrera/webdriverio#readme"
+}
