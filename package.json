@@ -1,5 +1,5 @@
 {
-  "name": "webdriverio",
+  "name": "webdriverio_project",
   "version": "1.0.0",
   "description": "some webdriverIO tests",
   "main": "index.js",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alejandroSagrera/webdriverio/issues"
   },
-  "homepage": "https://github.com/alejandroSagrera/webdriverio#readme"
+  "homepage": "https://github.com/alejandroSagrera/webdriverio#readme",
+  "devDependencies": {
+    "webdriverio": "^5.11.13"
+  }
 }
