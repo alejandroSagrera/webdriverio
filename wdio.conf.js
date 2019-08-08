@@ -20,7 +20,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -181,8 +181,14 @@ exports.config = {
      * Function to be executed before a test (in Mocha/Jasmine) or a step (in Cucumber) starts.
      * @param {Object} test test details
      */
-    // beforeTest: function (test) {
-    // },
+     beforeTest: function (test) {
+        const chai = require('chai')
+        const chaiWebdriver = require('chai-webdriverio').default
+        chai.use(chaiWebdriver(browser))
+        global.assert = chai.assert
+        global.should = chai.should
+        global.expect = chai.expect        
+     },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
