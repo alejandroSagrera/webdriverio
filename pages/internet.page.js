@@ -4,12 +4,16 @@ class Internet {
     get pageFooter(){return $('#page-footer');}
     get parent(){return $('ul');}
     get childElements(){return this.parent.$$('li');}
+    specificChildElement(index) { return this.parent.$('li:nth-child(3)'); }
 
     getLiText(){
         this.childElements.filter((element) =>{
             console.log(element.getText());
         });
     }
+    getSpecificElementText(index){
+        console.log(this.specificChildElement(index).getText());
+    }
 
 }
-export default new Internet();
+module.exports = new Internet();
