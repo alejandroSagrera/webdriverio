@@ -15,6 +15,13 @@ class Internet {
     getSpecificElementText(index){
         console.log(this.specificChildElement(index).getText());
     }
+    clickOnLink() {
+        if (this.firstLink.isDisplayed() === true) {
+            this.firstLink.click();
+        }
+        browser.pause (5000);
+    }
+    
 
 }
 module.exports = new Internet();
