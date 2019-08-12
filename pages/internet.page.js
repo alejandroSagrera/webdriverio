@@ -4,7 +4,8 @@ class Internet {
     get pageFooter(){return $('#page-footer');}
     get parent(){return $('ul');}
     get childElements(){return this.parent.$$('li');}
-    specificChildElement(index) { return this.parent.$("li:nth-child('${index}')"); }
+    get firstLink() { return $('ul li:nth-child(1) a'); }
+    specificChildElement(index) { return this.parent.$(`li:nth-child(${index})`); }
 
     getLiText(){
         this.childElements.filter((element) =>{
