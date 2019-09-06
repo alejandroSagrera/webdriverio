@@ -23,10 +23,6 @@ describe("Interacting with elements", function () {
         let isPageFooterInViewPort = internetPage.pageFooter.isDisplayedInViewport();
         console.log(isPageFooterInViewPort);
     })
-    it("Is subheader enabled?", () => {
-        let isSubHeadingEnabled = internetPage.pageSubHeading.isEnabled();
-        console.log(isSubHeadingEnabled);
-    })
     it("Click Element", () => {
         internetPage.clickOnLink();
     })

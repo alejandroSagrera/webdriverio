@@ -1,4 +1,5 @@
 internetPage = require("../pages/internet.page");
+loginData = require("../pages/login.page");
 
 describe(' Test element actions', function () {
     it('should click element', () => {
@@ -20,13 +21,13 @@ describe(' Test element actions', function () {
         expect(internetPage.checkboxes(1).isSelected()).equals(false)
     })
     it('should enter username', () => {
-        browser.url(`${browser.options.baseUrl}/login`)
+        browser.url(`${browser.options.baseUrl}login`)
         internetPage.enterUsername(loginData.userName)
         assert.equal(loginData.userName, internetPage.username.getValue())
     })
 
     it('should enter password', () => {
-        browser.url(`${browser.options.baseUrl}/login`)
+        browser.url(`${browser.options.baseUrl}login`)
         internetPage.enterPassword(loginData.password)
         assert.equal(loginData.password, internetPage.password.getValue())
     })
