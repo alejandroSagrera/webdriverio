@@ -21,15 +21,15 @@ describe(' Test element actions', function () {
         expect(internetPage.checkboxes(1).isSelected()).equals(false)
     })
     it('should enter username', () => {
-        browser.url(`${browser.options.baseUrl}login`)
-        internetPage.enterUsername(loginData.userName)
-        assert.equal(loginData.userName, internetPage.username.getValue())
+        browser.url(`/login`)
+        loginData.enterUsername("Ale")
+        assert.equal("Ale", loginData.username.getValue())
     })
 
     it('should enter password', () => {
-        browser.url(`${browser.options.baseUrl}login`)
-        internetPage.enterPassword(loginData.password)
-        assert.equal(loginData.password, internetPage.password.getValue())
+        browser.url(`/login`)
+        loginData.enterPassword("coso")
+        assert.equal("coso", loginData.password.getValue())
     })
 
     it('should clear Value', () => {
