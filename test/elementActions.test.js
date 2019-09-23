@@ -4,6 +4,7 @@ loginData = require("../pages/login.page");
 describe(' Test element actions', function () {
     it('should click element', () => {
         browser.url('/')
+        browser.maximizeWindow()
         internetPage.clickOnLink()
         expect(browser.getUrl()).equals('http://the-internet.herokuapp.com/abtest')
     })
