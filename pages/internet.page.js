@@ -34,7 +34,7 @@ class Internet {
 
     get draggable() { return $('#draggable'); }
     get droppable() { return $('#droppable'); }
-    get droppableParagraph() { return $('#droppable p'); }
+    get droppableParagraph() { return $('url'); }
 
     get dropdownMenu() { return $('#dropdown'); }
     get dropdownMenuOption1() { return $('#dropdown option:nth-child(2)'); }
