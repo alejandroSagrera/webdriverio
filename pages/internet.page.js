@@ -150,7 +150,7 @@ class Internet {
      * scrolls to the page footer
      */
     scrollToPageFooter() {
-        $("#page-footer").scrollIntoView();
+        this.pageFooter.scrollIntoView();
     }
 
 
