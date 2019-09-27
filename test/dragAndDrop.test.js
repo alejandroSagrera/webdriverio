@@ -3,6 +3,25 @@ internetPage = require('../pages/internet.page')
 describe("Drag and Drop", function () {
     it.skip('should drag column A to column B', () => {
         browser.url('/drag_and_drop')
+        browser.maximizeWindow()
+        internetPage.dragColumnAToColumnB()
+        browser.pause(3000)
+        assert.equal("A", internetPage.columnBHeader.getText())
+    })
+    it('Should drag and drop', () => {
+        browser.url('https://crossbrowsertesting.github.io/drag-and-drop.html')
+        browser.maximizeWindow()
+        internetPage.dragDraggableToDroppable()
+        assert.equal('Dropped!', internetPage.droppableParagraph.getText())
+    })
+})
+
+/*
+internetPage = require('../pages/internet.page')
+
+describe("Drag and Drop", function () {
+    it.skip('should drag column A to column B', () => {
+        browser.url(`${browser.options.baseUrl}/drag_and_drop`)
         internetPage.dragColumnAToColumnB()
         browser.pause(3000)
         assert.equal("A", internetPage.columnBHeader.getText())
@@ -10,7 +29,7 @@ describe("Drag and Drop", function () {
     it('Should drag and drop', () => {
         browser.url('https://crossbrowsertesting.github.io/drag-and-drop.html')
         internetPage.dragDraggableToDroppable()
-        browser.pause(3000)
         assert.equal('Dropped!', internetPage.droppableParagraph.getText())
     })
 })
+*/
