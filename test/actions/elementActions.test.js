@@ -1,5 +1,5 @@
-internetPage = require("../pages/internet.page");
-loginData = require("../pages/login.page");
+internetPage = require("../../pages/internet.page")
+loginData = require("../../pages/login.page")
 
 describe(' Test element actions', function () {
     it('should click element', () => {
