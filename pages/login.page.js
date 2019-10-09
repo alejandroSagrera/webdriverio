@@ -1,4 +1,3 @@
-
 class Login {
     get username() { return $('#username') }
     get password() { return $('#password') }

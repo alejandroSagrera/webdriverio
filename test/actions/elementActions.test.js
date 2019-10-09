@@ -1,5 +1,6 @@
 internetPage = require("../../pages/internet.page")
-loginData = require("../../pages/login.page")
+loginData = require("../../data/loginData")
+
 
 describe(' Test element actions', function () {
     it('should click element', () => {
@@ -23,14 +24,14 @@ describe(' Test element actions', function () {
     })
     it('should enter username', () => {
         browser.url(`/login`)
-        loginData.enterUsername("Ale")
-        assert.equal("Ale", loginData.username.getValue())
+        internetPage.enterUsername(loginData.userName)
+        assert.equal(loginData.userName, internetPage.username.getValue())
     })
 
     it('should enter password', () => {
         browser.url(`/login`)
-        loginData.enterPassword("coso")
-        assert.equal("coso", loginData.password.getValue())
+        internetPage.enterPassword(loginData.password)
+        assert.equal(loginData.password, internetPage.password.getValue())
     })
 
     it('should clear Value', () => {
