@@ -1,5 +1,5 @@
-const login = require("../../pages/login.page")
-const data = require('../../data/logindata')
+const login = require("../pages/login.page")
+const data = require('../data/loginData')
 
 describe("Login Page", function () {
     it("Should enter username", () => {
